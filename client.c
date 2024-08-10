@@ -17,32 +17,12 @@
 #include "/home/nboer/git/Libft/libft.h"
 
 
-sigset_t	set;
-
-// 1. a socket (an endpoint for communication) is identified by 
-// 		an IP adress concatenated with a port number
-// 2. the server waits for incoming client requests by listening to 
-// 		a specified port. Once a request is received, the server
-//		accepts a connection from the socket to complete the 
-//		connection.
-// 3. A port number identifies what kind of services will be provided
-// 4. Most ports below the number 1024 are reserved for standard services
-// 5. When a client process initiates a request for a connection,
-//		it is assigned a port by the host computer, which is
-//		an arbitrary number greater than 1024.
-// 6. Based on the destination port number, the packets traveling 
-// 		between the hosts are delivered to the appropriate process.
-
-int	main(int argc, char *argv[])
-{
-	int i;
-	int j;
-	typedef struct sigaction
-	{
-	} sig;
-
-
-	
+// Write a program (main) in which the client takes two parameters/arguments
+// The PID of the server to which it wants to send the message
+// A message
+// Encrypt the message (I did the encryption via bits)
+// Send the message to the server (via its PID)
+// Create a stop condition so that the server knows when it has finished receiving the message
 ◦ signal
 ◦ sigemptyset
 ◦ sigaddset
@@ -55,10 +35,13 @@ int	main(int argc, char *argv[])
 ◦ sleep
 ◦ usleep
 ◦ exit
-	
-	
 
 
+
+int	main(int argc, char *argv[])
+{
+	int i;
+	int j;
 	i = 1;
 	while (i < argc)
 	{
@@ -79,10 +62,3 @@ int	main(int argc, char *argv[])
 	// Set up a server and return its PID
 	// the client takes the PID as argument, and a string to send
 }
-
-void	client(server PID, char *str);
-{
-
-}
-
-void	server()
