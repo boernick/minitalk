@@ -6,17 +6,17 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 13:41:33 by nboer             #+#    #+#             */
-/*   Updated: 2024/06/15 15:29:14 by nboer            ###   ########.fr       */
+/*   Updated: 2024/08/18 14:56:46 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *temp;
-	t_list *start;
-	
+	t_list	*temp;
+	t_list	*start;
+
 	if (!lst || !del)
 		return ;
 	start = *lst;

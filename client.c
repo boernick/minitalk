@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:01:15 by nboer             #+#    #+#             */
-/*   Updated: 2024/08/11 21:25:23 by nboer            ###   ########.fr       */
+/*   Updated: 2024/08/18 15:08:15 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,6 @@ void	send_char(char c, int pid)
 	get_bits(c, pid);
 }
 
-
 int	main(int argc, char **argv)
 {
 	int	i;
@@ -67,10 +66,9 @@ int	main(int argc, char **argv)
 
 	if (argc < 3)
 	{
-		ft_printf("error");
+		ft_printf("input error\n");
 		exit(EXIT_FAILURE);
 	}
-
 	pid = ft_atoi(argv[1]);
 	i = 2;
 	while (i < argc)
