@@ -6,7 +6,7 @@
 /*   By: nboer <nboer@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/10 13:01:15 by nboer             #+#    #+#             */
-/*   Updated: 2024/08/18 15:08:15 by nboer            ###   ########.fr       */
+/*   Updated: 2024/08/28 10:46:11 by nboer            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	get_bits(int number, int pid)
 		kill(pid, SIGUSR2);
 	else if (i == 1)
 		kill(pid, SIGUSR1);
-	usleep(100);
+	usleep(1000);
 }
 
 void	send_char(char c, int pid)
@@ -52,7 +52,7 @@ void	send_char(char c, int pid)
 	while (n > 0)
 	{
 		kill(pid, SIGUSR2);
-		usleep(100);
+		usleep(1000);
 		n--;
 	}
 	get_bits(c, pid);
